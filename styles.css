@@ -7,7 +7,6 @@
 
 body, html {
     font-family: Arial, sans-serif;
-    
 }
 
 body {
@@ -17,7 +16,7 @@ body {
     transition: background-color 4s ease; /* Transición suave */
 }
 
-
+/* Header */
 header {
     display: flex;
     align-items: center;
@@ -82,6 +81,7 @@ form input, form button {
     padding: 10px;
 }
 
+/* Carrusel */
 .carousel {
     position: fixed;
     top: 0;
@@ -115,7 +115,7 @@ form input, form button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+    z-index: 10;
 }
 
 .carousel-button.prev {
@@ -130,6 +130,7 @@ form input, form button {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -151,6 +152,7 @@ footer {
     margin: 5px 0;
 }
 
+/* Catálogos */
 .catalogos {
     text-align: center;
     padding: 20px;
@@ -168,65 +170,25 @@ footer {
     color: #0056b3;
 }
 
-
 .catalog-link {
-    color: #ffcc00; /* Color distintivo para el enlace de "CATÁLOGOS" */
+    color: #ffcc00;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .catalog-link:hover {
-    color: #ff9900; /* Color al pasar el cursor */
+    color: #ff9900;
 }
 
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.button {
-    color: #fff;
-    background-color: #007bff;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para la página de catálogos 
-.catalog-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.catalog-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-
-
-    */
-
-
+/* Contenedor de catálogos */
 .catalog-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columnas */
     gap: 20px;
     padding: 20px;
-    max-width: 1000px; /* Limita el ancho para que el contenido sea más fácil de ver */
-   
-    margin: 0px auto 60px; 
+    max-width: 1000px;
+    margin: 20px auto 60px; /* Espacio superior e inferior */
 }
 
 .catalog-item {
@@ -236,8 +198,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
-
-
 
 .catalog-item img {
     width: 100%;
@@ -249,4 +209,72 @@ footer {
 /* Efecto de escala al pasar el cursor */
 .catalog-item:hover img {
     transform: scale(1.1);
+}
+
+/* --- Responsividad --- */
+
+/* Pantallas de tablets y móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-content h1 {
+        font-size: 20px;
+    }
+
+    .auth-buttons {
+        gap: 5px;
+    }
+
+    .catalog-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tabletas */
+        padding: 10px;
+    }
+
+    .form-container {
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .carousel-button {
+        font-size: 24px;
+        padding: 8px 16px;
+    }
+}
+
+/* Pantallas de móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .catalog-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    }
+
+    .form-container {
+        max-width: 280px;
+    }
+
+    .carousel-button {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
