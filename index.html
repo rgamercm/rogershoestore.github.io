@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con logo, nombre y botones de navegación -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo de la empresa"></a>
+        </div>
+        <h1>Roger Footwear</h1>
+        <div class="header-links">
+            <a href="catalogos.html" class="catalog-link">CATÁLOGOS</a>
+            <a href="login.html" class="button">Iniciar Sesión</a>
+            <a href="registro.html" class="button">Registrarte</a>
+        </div>
+    </header>
+    <!-- ... resto del contenido ... -->
+
+    <!-- Carrusel de imágenes de fondo con botones de control -->
+    <div class="carousel">
+        <img src="imagen1.jpg" class="carousel-img active">
+        <img src="imagen2.jpg" class="carousel-img">
+        <img src="imagen3.jpg" class="carousel-img">
+        <button class="carousel-button prev" onclick="manualChangeImage(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="manualChangeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </div>
+        <div class="footer-address">
+            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: contacto@miempresa.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
